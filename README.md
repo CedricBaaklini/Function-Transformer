@@ -1,5 +1,5 @@
 # Function-Transformer
-A simple Swift program that will tell you the transformations of your function
+A simple program that will tell you the transformations of your function
 
 ## The Main Idea
 
