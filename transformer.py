@@ -80,4 +80,9 @@ d = int(input("d: "))
 
 prime = Transformer(a, b, c, d)
 
+print(prime.vDilation())
+print(prime.hDilation())
+print(prime.vReflection())
+print(prime.hReflection())
 print(prime.hTranslation())
+print(prime.vTranslation())
