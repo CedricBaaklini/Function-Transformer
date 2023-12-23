@@ -7,26 +7,27 @@ class Transformer:
         self.c = c
         self.d = d
 
+
     # Dilation
     def vDilation(self) -> str:
         if abs(self.a) > 1:
-            dilation = f"Stretched {self.a} times"
+            growth = f"Stretched {abs(self.a)} times"
         elif 0 < abs(self.a) < 1:
-            dilation = f"Compressed {self.a} times"
+            growth = f"Compressed {abs(self.a)} times"
         else:
-            dilation = "No dilation"
+            growth = "No dilation"
 
-        return dilation
+        return growth
 
     def hDilation(self) -> str:
         if abs(self.b) > 1:
-            dilation = f"Compressed {self.b} times"
+            growth = f"Compressed {self.b} times"
         elif 0 < abs(self.b) < 1:
-            dilation = f"Stretched {self.b} times"
+            growth = f"Stretched {self.b} times"
         else:
-            dilation = "No dilation"
+            growth = "No dilation"
 
-        return dilation
+        return growth
 
     # Reflection
 
@@ -50,9 +51,9 @@ class Transformer:
 
     def hTranslation(self) -> str:
         if self.c > 0:
-            spaces = f"Moved {self.c} spaces(s) right"
+            spaces = f"Moved {self.c} spaces(s) to the right"
         elif self.c < 0:
-            spaces = f"Moved {self.c} spaces(s) left"
+            spaces = f"Moved {self.c} spaces(s) to the left"
         else:
             spaces = "No translation"
 
@@ -80,6 +81,8 @@ d = int(input("d: "))
 
 prime = Transformer(a, b, c, d)
 
+print("=======================")
+print("Transformation of function: ")
 print(prime.vDilation())
 print(prime.hDilation())
 print(prime.vReflection())
