@@ -9,7 +9,7 @@ class Transformer:
 
 
     # Dilation
-    def vDilation(self) -> str:
+    def v_dilation(self) -> str:
         if abs(self.a) > 1:
             growth = f"Stretched {abs(self.a)} times"
         elif 0 < abs(self.a) < 1:
@@ -19,7 +19,7 @@ class Transformer:
 
         return growth
 
-    def hDilation(self) -> str:
+    def h_dilation(self) -> str:
         if abs(self.b) > 1:
             growth = f"Compressed {self.b} times"
         elif 0 < abs(self.b) < 1:
@@ -31,25 +31,19 @@ class Transformer:
 
     # Reflection
 
-    def vReflection(self) -> str:
-        if self.a < 0:
-            flip = True
-        else:
-            flip = False
+    def v_reflection(self) -> str:
+        flip = self.a < 0
 
         return f"Reflected over x-axis: {flip}"
 
-    def hReflection(self) -> str:
-        if self.b < 0:
-            flip = True
-        else:
-            flip = False
+    def h_reflection(self) -> str:
+        flip = self.b < 0
 
-        return f"Reflected over x-axis: {flip}"
+        return f"Reflected over y-axis: {flip}"
 
     # Translation
 
-    def hTranslation(self) -> str:
+    def h_translation(self) -> str:
         if self.c > 0:
             spaces = f"Moved {self.c} spaces(s) to the right"
         elif self.c < 0:
@@ -59,7 +53,7 @@ class Transformer:
 
         return spaces
 
-    def vTranslation(self) -> str:
+    def v_translation(self) -> str:
         if self.d > 0:
             spaces = f"Moved {self.d} space(s) up"
         elif self.d < 0:
@@ -83,9 +77,9 @@ prime = Transformer(a, b, c, d)
 
 print("=======================")
 print("Transformation of function: ")
-print(prime.vDilation())
-print(prime.hDilation())
-print(prime.vReflection())
-print(prime.hReflection())
-print(prime.hTranslation())
-print(prime.vTranslation())
+print(prime.v_dilation())
+print(prime.h_dilation())
+print(prime.v_reflection())
+print(prime.h_reflection())
+print(prime.h_translation())
+print(prime.v_translation())
