@@ -21,9 +21,9 @@ class Transformer:
 
     def h_dilation(self) -> str:
         if abs(self.b) > 1:
-            growth = f"Compressed {self.b} times"
+            growth = f"Compressed {abs(1/self.b)} times"
         elif 0 < abs(self.b) < 1:
-            growth = f"Stretched {self.b} times"
+            growth = f"Stretched {abs(1/self.b)} times"
         else:
             growth = "No dilation"
 
@@ -47,7 +47,7 @@ class Transformer:
         if self.c > 0:
             spaces = f"Moved {self.c} spaces(s) to the right"
         elif self.c < 0:
-            spaces = f"Moved {self.c} spaces(s) to the left"
+            spaces = f"Moved {abs(self.c)} spaces(s) to the left"
         else:
             spaces = "No translation"
 
@@ -57,7 +57,7 @@ class Transformer:
         if self.d > 0:
             spaces = f"Moved {self.d} space(s) up"
         elif self.d < 0:
-            spaces = f"Moved {self.d} space(s) down"
+            spaces = f"Moved {abs(self.d)} space(s) down"
         else:
             spaces = "No translation"
 
