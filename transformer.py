@@ -76,7 +76,7 @@ d = int(input("d: "))
 prime = Transformer(a, b, c, d)
 
 print("=======================")
-print("Transformation of function: ")
+print("Your function has: ")
 print(prime.v_dilation())
 print(prime.h_dilation())
 print(prime.v_reflection())

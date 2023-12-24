@@ -93,12 +93,10 @@ class Transformer {
 let prime = new Transformer(3, 1, 4, 2);
 
 prime.a = -3;
-prime.b = -1;
+prime.b = -1/4;
 prime.c = -2;
 prime.d = -4;
 
-prime.a = -1/3;
-prime.b = 1/3;
 
 console.log("Your function has: ");
 console.log("");
