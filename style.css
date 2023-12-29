@@ -1,7 +1,19 @@
 body {
-  text-align: center;
   color: blue;
+  background-color: skyblue;
   font-family: Arial, sans-serif;
+  text-align: center;
+}
+body math {
+  font-size: x-large;
+}
+body .terms {
+  margin: 1in;
+  padding: 0.5in;
+}
+body button {
+  color: white;
+  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,8 +13,8 @@ class Transformer {
 
     //Dilation
 
-    vDilation(): String {
-        let growth: String;
+    vDilation(): string {
+        let growth: string;
 
         if (Math.abs(this.a) > 1) {
             growth = `Stretched ${Math.abs(this.a)} times`;
@@ -27,8 +27,8 @@ class Transformer {
         return growth;
     }
 
-    hDilation(): String {
-        let growth: String;
+    hDilation(): string {
+        let growth: string;
 
         if (Math.abs(this.b) > 1) {
             growth = `Compressed ${Math.abs(1/this.b)} times`;
@@ -43,14 +43,14 @@ class Transformer {
 
     //Reflection
 
-    vReflection(): String {
+    vReflection(): string {
         let flip = this.a < 0;
 
         return `Reflected over x-axis: ${flip}`;
     }
 
 
-    hReflection(): String {
+    hReflection(): string {
         let flip = this.b < 0;
 
         return `Reflected over y-axis: ${flip}`;
@@ -58,13 +58,13 @@ class Transformer {
 
     //Translation
 
-    hTranslation(): String {
+    hTranslation(): string {
         let spaces: string
 
         if (this.c > 0) {
-            spaces = `Moved ${this.c} space(s) to the right`;
+            spaces = `Moved ${this.c} space(s) to the left`;
         } else if (this.c < 0) {
-            spaces = `Moved ${Math.abs(this.c)} space(s) to the left`;
+            spaces = `Moved ${Math.abs(this.c)} space(s) to the right`;
         } else {
             spaces = "No translation";
         }
@@ -72,7 +72,7 @@ class Transformer {
         return spaces;
     }
 
-    vTranslation(): String {
+    vTranslation(): string {
         let spaces: string
 
         if (this.d > 0) {
@@ -92,11 +92,10 @@ class Transformer {
 
 let prime = new Transformer(3, 1, 4, 2);
 
-prime.a = -3;
+prime.a = 2;
 prime.b = -1/4;
 prime.c = -2;
 prime.d = -4;
-
 
 console.log("Your function has: ");
 console.log("");

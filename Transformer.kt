@@ -1,4 +1,4 @@
-class Transformer {
+class Transformer(var a: Double, var b: Double, var c: Double, var d: Double) {
 
 }
 

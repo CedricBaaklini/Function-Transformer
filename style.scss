@@ -1,7 +1,22 @@
 $textColor: blue;
 
 body {
-  text-align: center;
   color: $textColor;
+  background-color: skyblue;
   font-family: Arial, sans-serif;
+  text-align: center;
+
+  math {
+    font-size: x-large;
+  }
+
+  .terms {
+    margin: 1in;
+    padding: 0.5in;
+  }
+
+  button {
+    color: white;
+    background-color: blue;
+  }
 }
