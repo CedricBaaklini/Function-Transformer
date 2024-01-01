@@ -109,12 +109,15 @@ function showTrans(): string {
     let vMoveInput = vMove as HTMLInputElement;
     let vMoveNum = isNaN(Number(vMoveInput.value)) ? 0 : Number(vMoveInput.value);
 
+    //Assigning values to object
     prime.a = vStretchNum;
     prime.b = hStretchNum;
     prime.c = hMoveNum;
     prime.d = vMoveNum;
 
-    document.getElementById("output").innerHTML = "Your function has: " + "<br><br>" +
+    document.getElementById("output").innerHTML = "Your function has: " + "<br><br>" + prime.vDilation() + "<br><br>" + prime.hDilation() + "<br><br>" + prime.vReflection() + "<br><br>" + prime.hReflection() + "<br><br>" + prime.hTranslation() + "<br><br>" + prime.vTranslation();
+
+    return document.getElementById("output").innerHTML;
 }
 
 
