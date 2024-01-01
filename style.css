@@ -1,5 +1,5 @@
 body {
-  color: blue;
+  color: darkblue;
   background-color: skyblue;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -13,7 +13,7 @@ body .terms {
 }
 body button {
   color: white;
-  background-color: blue;
+  background-color: darkblue;
 }
 
 /*# sourceMappingURL=style.css.map */

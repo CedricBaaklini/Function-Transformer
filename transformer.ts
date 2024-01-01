@@ -88,15 +88,38 @@ class Transformer {
 }
 
 
-//Driver
-
+//Creating object that represents the function
 let prime = new Transformer(3, 1, 4, 2);
 
-prime.a = 2;
-prime.b = -1/4;
-prime.c = -2;
-prime.d = -4;
+function showTrans(): string {
+    //Converting input into numbers
+    let vStretch = document.getElementById("vStretch");
+    let vStretchInput = vStretch as HTMLInputElement;
+    let vStretchNum = isNaN(Number(vStretchInput.value)) ? 0 : Number(vStretchInput.value);
 
+    let hStretch = document.getElementById("hStretch");
+    let hStretchInput = hStretch as HTMLInputElement;
+    let hStretchNum = isNaN(Number(hStretchInput.value)) ? 0 : Number(hStretchInput.value);
+
+    let hMove = document.getElementById("hMove");
+    let hMoveInput = hMove as HTMLInputElement;
+    let hMoveNum = isNaN(Number(hMoveInput.value)) ? 0 : Number(hMoveInput.value);
+
+    let vMove = document.getElementById("vMove");
+    let vMoveInput = vMove as HTMLInputElement;
+    let vMoveNum = isNaN(Number(vMoveInput.value)) ? 0 : Number(vMoveInput.value);
+
+    prime.a = vStretchNum;
+    prime.b = hStretchNum;
+    prime.c = hMoveNum;
+    prime.d = vMoveNum;
+
+    document.getElementById("output").innerHTML = "Your function has: " + "<br><br>" +
+}
+
+
+
+//Debugging
 console.log("Your function has: ");
 console.log("");
 console.log(prime.vDilation());

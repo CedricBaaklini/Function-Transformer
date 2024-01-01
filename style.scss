@@ -1,7 +1,5 @@
-$textColor: blue;
-
 body {
-  color: $textColor;
+  color: darkblue;
   background-color: skyblue;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -17,6 +15,6 @@ body {
 
   button {
     color: white;
-    background-color: blue;
+    background-color: darkblue;
   }
 }
